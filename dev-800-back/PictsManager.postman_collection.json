@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "0b6c6ad6-eede-4f69-a1bf-5189f2630405",
+		"name": "PictsManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"sana\",\n    \"email\":\"sanaammar.info@gmail.com\",\n    \"password\":\"123456\",\n    \"nom\":\"Ammar\",\n    \"prenom\":\"Sana\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5500/Authentification/inscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"Authentification",
+						"inscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreationAlbum",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbmEiLCJpYXQiOjE2MjAzMzQ1NjcsImV4cCI6MTYyMDQyMDk2N30.x16rnST7YQhLPZ-kFM0PFURdRX7KUKPx26zfNDVffhc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"nomAlbum\":\"Testalbum2\",\n     \"hashtags\":[\"sana\",\"ammar\"]\n\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5500/gallery/creerAlbum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"gallery",
+						"creerAlbum"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "sanaammar.info@gmail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5500/Authentification/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"Authentification",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MotDePasseOublie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \n    \"email\":\"sanaammar.info@gmail.com\"\n \n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5500/Authentification/demandemotdepasse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"Authentification",
+						"demandemotdepasse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changementMotdePasse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"password\":\"123456789\"\n \n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5500/Authentification/changementPassword/4c8077c93c3a9a4c4c2c7d9b97914721623b009505bbb85350bbad6427a12028/6089d2e29e2e11539811a779",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5500",
+					"path": [
+						"Authentification",
+						"changementPassword",
+						"4c8077c93c3a9a4c4c2c7d9b97914721623b009505bbb85350bbad6427a12028",
+						"6089d2e29e2e11539811a779"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

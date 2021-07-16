@@ -1,0 +1,9 @@
+{
+    "secret": "PictManagerPasswor=$",
+    "motdepasseoublie": "PictManagerPassworOublie=$",
+    "gmail":"PictsManager@gmail.com",
+    "passwordGmail": "Sana2020+",
+    "confirmUrl":"https://dev-800.herokuapp.com/Authentification/confirmation",
+    "appURL":"http://localhost:5500"
+
+}
